@@ -1,0 +1,44 @@
+Create an ec2 instance
+
+Update machine 
+sudo apt update
+
+I'm using Ubuntu so
+sudo apt update
+We need Java installer (java setup )
+
+sudo apt install openjdk-8-jdk -y
+
+Visit this site 
+https://pkg.jenkins.io/
+Then select debian-stable/
+This will give you a guide and commands to install Jenkins
+
+We have successfully installed Jenkins
+To start the jenkins server
+
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+
+sudo systemctl enable jenkins  (to check status)
+
+By default Jenkins occupy 8080 port 
+
+So copy public ip of your instance and type
+link:8080
+
+Also in your Security Group  (in incoming), you must add a custom TCP port with an 8080 port number and 0.0.0.0/0 rule
+After connecting to public ip:8080
+
+It will provide a path
+Copy the path in instance and type
+
+sudo cat (path)
+It will generate a key for your Jenkins server
+
+Paste the key in the running server and proceed toward complete installation of Jenkins
+After all authentications (name, password, email, etc) 
+You are now on the Jenkins dashboard 
+
+Ready to use Jenkins
+
